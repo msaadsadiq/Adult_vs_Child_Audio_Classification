@@ -1,27 +1,12 @@
-# Music Genre Classification with Deep Learning
+# Adult vs Child Speech Classification with Deep Learning
 
 ## Abstract
 
-In this project we adapt the model from [Choi et al.](https://github.com/keunwoochoi/music-auto_tagging-keras) to train a custom music genre classification system with our own genres and data. The model takes as an input the spectogram of music frames and analyzes the image using a Convolutional Neural Network (CNN) plus a Recurrent Neural Network (RNN). The output of the system is a vector of predicted genres for the song. 
-
-We fine-tuned their model with a small dataset (30 songs per genre) and test it on the GTZAN dataset providing a final accuracy of 80%. 
+In this project we adapt the model from [Choi et al.](https://github.com/keunwoochoi/music-auto_tagging-keras) to train a custom music genre classification system with our own genres and data. We then use the music genre classification as a speech classification model. The model takes as an input the spectogram of audio samples from Adults and Children. It analyzes the image using a Convolutional Neural Network (CNN) plus a Recurrent Neural Network (RNN). The output of the system isthe predicted class of the audio sample either Adult or Child. 
 
 ## Code 
 
-In this repository we provide the scripts to fine-tune the pre-trained model and a quick music genre prediction algorithm using our own weights. 
-
-Currently the genres supported are the [GTZAN dataset](http://marsyasweb.appspot.com/download/data_sets/) tags:
-
-- Blues
-- Classical
-- Country
-- Disco
-- HipHop
-- Jazz
-- Metal
-- Pop
-- Reggae
-- Rock
+In this repository we provide the scripts to fine-tune the pre-trained model to re-use a music genre prediction algorithm to be used as an Adult-Child classifier. Since we have millions of annotated songs to train on, the model generally performs better on models train only on adult and child voices. Moreover, data for clean and annotated adult / child voices is very hard to get. 
 
 ### Prerequisites
 
